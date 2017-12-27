@@ -49,14 +49,14 @@
         methods: {
             fetchItems()
             {
-              let uri = 'http://laravuejscrud.local/items';
+              let uri = '/items';
               this.axios.get(uri).then((response) => {
                   this.items = response.data;
               });
             },
             deleteItem(id)
             {
-              let uri = `http://laravuejscrud.local/items/${id}`;
+              let uri = `/items/${id}`;
               this.items.splice(id, 1);
               this.axios.delete(uri);
             }

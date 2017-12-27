@@ -33,7 +33,7 @@
     },
     methods: {
       addItem(){
-        let uri = 'http://laravuejscrud.local/items';
+        let uri = '/items';
         this.axios.post(uri, this.item).then((response) => {
           this.$router.push({name: 'DisplayItem'})
         })

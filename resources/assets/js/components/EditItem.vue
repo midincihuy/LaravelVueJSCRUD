@@ -40,7 +40,7 @@
         methods: {
             getItem()
             {
-              let uri = `http://laravuejscrud.local/items/${this.$route.params.id}/edit`;
+              let uri = `/items/${this.$route.params.id}/edit`;
                 this.axios.get(uri).then((response) => {
                     this.item = response.data;
                 });
@@ -48,7 +48,7 @@
 
             updateItem()
             {
-              let uri = 'http://laravuejscrud.local/items/'+this.$route.params.id;
+              let uri = '/items/'+this.$route.params.id;
                 this.axios.patch(uri, this.item).then((response) => {
                   this.$router.push({name: 'DisplayItem'});
                 });

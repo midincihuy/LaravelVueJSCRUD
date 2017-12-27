@@ -16349,7 +16349,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     addItem: function addItem() {
       var _this = this;
 
-      var uri = 'http://laravuejscrud.local/items';
+      var uri = '/items';
       this.axios.post(uri, this.item).then(function (response) {
         _this.$router.push({ name: 'DisplayItem' });
       });
@@ -16569,13 +16569,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         fetchItems: function fetchItems() {
             var _this = this;
 
-            var uri = 'http://laravuejscrud.local/items';
+            var uri = '/items';
             this.axios.get(uri).then(function (response) {
                 _this.items = response.data;
             });
         },
         deleteItem: function deleteItem(id) {
-            var uri = 'http://laravuejscrud.local/items/' + id;
+            var uri = '/items/' + id;
             this.items.splice(id, 1);
             this.axios.delete(uri);
         }
@@ -16786,7 +16786,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         getItem: function getItem() {
             var _this = this;
 
-            var uri = 'http://laravuejscrud.local/items/' + this.$route.params.id + '/edit';
+            var uri = '/items/' + this.$route.params.id + '/edit';
             this.axios.get(uri).then(function (response) {
                 _this.item = response.data;
             });
@@ -16794,7 +16794,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         updateItem: function updateItem() {
             var _this2 = this;
 
-            var uri = 'http://laravuejscrud.local/items/' + this.$route.params.id;
+            var uri = '/items/' + this.$route.params.id;
             this.axios.patch(uri, this.item).then(function (response) {
                 _this2.$router.push({ name: 'DisplayItem' });
             });
